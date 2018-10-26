@@ -6,12 +6,35 @@ package com;
 
 public class Paul implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Paul() {
-    }
+	@org.kie.api.definition.type.Label(value = "age")
+	private java.lang.Integer age;
+	@org.kie.api.definition.type.Label(value = "birthDate")
+	private java.util.Date birthDate;
 
+	public Paul() {
+	}
 
+	public java.lang.Integer getAge() {
+		return this.age;
+	}
 
+	public void setAge(java.lang.Integer age) {
+		this.age = age;
+	}
+
+	public java.util.Date getBirthDate() {
+		return this.birthDate;
+	}
+
+	public void setBirthDate(java.util.Date birthDate) {
+		this.birthDate = birthDate;
+	}
+
+	public Paul(java.lang.Integer age, java.util.Date birthDate) {
+		this.age = age;
+		this.birthDate = birthDate;
+	}
 
 }
