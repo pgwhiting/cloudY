@@ -8,10 +8,13 @@ public class Paul implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "age")
+	@org.kie.api.definition.type.Label("age")
 	private java.lang.Integer age;
-	@org.kie.api.definition.type.Label(value = "birthDate")
+	@org.kie.api.definition.type.Label("birthDate")
 	private java.util.Date birthDate;
+
+	@org.kie.api.definition.type.Label(value = "nationality")
+	private java.lang.String nationality;
 
 	public Paul() {
 	}
@@ -32,9 +35,19 @@ public class Paul implements java.io.Serializable {
 		this.birthDate = birthDate;
 	}
 
-	public Paul(java.lang.Integer age, java.util.Date birthDate) {
+	public java.lang.String getNationality() {
+		return this.nationality;
+	}
+
+	public void setNationality(java.lang.String nationality) {
+		this.nationality = nationality;
+	}
+
+	public Paul(java.lang.Integer age, java.util.Date birthDate,
+			java.lang.String nationality) {
 		this.age = age;
 		this.birthDate = birthDate;
+		this.nationality = nationality;
 	}
 
 }
